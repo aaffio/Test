@@ -1,0 +1,48 @@
+/* afriano */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+//import java.util.Scanner;
+class ascending{
+
+public static void main( String[]args ){
+
+int b;
+
+System.out.println("------- How many number to be ascending -------");
+System.out.println();
+Scanner s = new Scanner(System.in);
+
+b = s.nextInt();
+System.out.print("Number of input :"+b);
+
+int [] inpt= new int [b];
+System.out.println();
+
+for (int x=0; x<b; x++)
+{
+inpt[x] = s.nextInt();
+System.out.print("Input "+(x+1)+" = "+inpt[x]+", ");
+}
+System.out.println();
+System.out.println("-------- Result --------");
+System.out.println();
+
+for(int x = 1; x < b; x++) {
+for(int j = x; j < b; j++) {
+if(inpt[x - 1] > inpt[j]) {
+int dummy = inpt[x - 1];
+inpt[x - 1] = inpt[j];
+inpt[j] = dummy;
+}
+}
+}
+System.out.print("Output : ");
+for(int x=0; x<=b-1; x++)
+{
+System.out.print(""+inpt[x]+",");
+}
+System.out.println();
+}
+}
