@@ -1,0 +1,22 @@
+/* Afriano */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class TrianglePattern
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		System.out.println("Simple triangle pattern");
+        for(int i=0;i<5;i++) {
+         for(int j=0;j<5-i;j++) {
+             System.out.print(" ");
+         }
+        for(int k=0;k<=i;k++) {
+            System.out.print("* ");
+        }
+        System.out.println();  
+      }
+	}
+}
